@@ -20,10 +20,12 @@ const slides = [
 function App() {
 
   const [sliderRef, slider] = useKeenSlider({
-    // slidesPerView: 3,
     mode: "snap",
     initial: 0,
     loop: true,
+    // maybe here you need write the following property : 
+    // slidesPerView: 3,
+    // instead of the next obj:
     slides: {
       perView: 1
     }
@@ -47,9 +49,11 @@ function App() {
       </div>
       <div className="buttons">
         <button className='button'
+          //                 maybe here you need to write : slider.prev()
           onClick={(e) => e.stopPropagation() || slider.current?.prev()}
         >prev</button>
         <button className='button'
+          //                 maybe here you need to write : slider.next()
           onClick={(e) => e.stopPropagation() || slider.current?.next()}
         >next</button>
       </div>
