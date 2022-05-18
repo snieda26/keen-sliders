@@ -28,6 +28,10 @@ function App() {
     // instead of the next obj:
     slides: {
       perView: 1
+    },
+    slideChanged(slider) {
+      // show in console current slide
+      console.log(slider.details().relativeSlide)
     }
   });
 
